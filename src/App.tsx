@@ -31,7 +31,7 @@ function HomePage({ openReservationModal }: { openReservationModal: () => void }
   return (
     <>
       <Hero />
-      <ClosureNotice />
+      {/* <ClosureNotice /> */}
       <AboutSection />
       <FeatureGrid />
       <ReservationSection openReservationModal={openReservationModal} />
