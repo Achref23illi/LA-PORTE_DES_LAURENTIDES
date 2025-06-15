@@ -65,7 +65,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="text-gray-400 text-sm font-inter">
-              © 2024 La Porte des Laurentides. Tous droits réservés.
+              © 2025 La Porte des Laurentides. Tous droits réservés.
             </div>
           </div>
         </div>
