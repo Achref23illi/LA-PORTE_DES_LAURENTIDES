@@ -1,4 +1,13 @@
+import { useNavigate } from 'react-router-dom'
+
 const Footer = () => {
+  const navigate = useNavigate()
+
+  const handleNavigation = (path: string) => {
+    navigate(path)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <footer id="contact" className="bg-black py-16 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4">
@@ -13,11 +22,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 tracking-wider font-inter">LIENS RAPIDES</h4>
             <ul className="space-y-2 text-sm font-inter">
-              <li><a href="#menu" className="text-gray-300 hover:text-yellow-400 transition-colors">Menu</a></li>
-              <li><a href="#reservations" className="text-gray-300 hover:text-yellow-400 transition-colors">Réservations</a></li>
-              <li><a href="#events" className="text-gray-300 hover:text-yellow-400 transition-colors">Salle privée</a></li>
-              <li><a href="#events" className="text-gray-300 hover:text-yellow-400 transition-colors">Événements</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-yellow-400 transition-colors">Cartes-cadeaux</a></li>
+              <li><button onClick={() => handleNavigation('/menu-dining')} className="text-gray-300 hover:text-yellow-400 transition-colors cursor-pointer">Menu</button></li>
+              <li><button onClick={() => handleNavigation('/reservations')} className="text-gray-300 hover:text-yellow-400 transition-colors cursor-pointer">Réservations</button></li>
+              <li><button onClick={() => handleNavigation('/reservations')} className="text-gray-300 hover:text-yellow-400 transition-colors cursor-pointer">Salle privée</button></li>
+              <li><button onClick={() => handleNavigation('/reservations')} className="text-gray-300 hover:text-yellow-400 transition-colors cursor-pointer">Événements</button></li>
+              <li><button onClick={() => handleNavigation('/nous-joindre')} className="text-gray-300 hover:text-yellow-400 transition-colors cursor-pointer">Contact</button></li>
             </ul>
           </div>
           

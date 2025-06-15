@@ -1,6 +1,12 @@
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 
-const Hero = () => {
+interface HeroProps {
+  openReservationModal: () => void
+}
+
+const Hero = ({ openReservationModal }: HeroProps) => {
+  const navigate = useNavigate()
   return (
     <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Hero Background Image */}
@@ -65,6 +71,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(234, 179, 8, 0.3)' }}
               whileTap={{ scale: 0.95 }}
               className="bg-yellow-600 hover:bg-yellow-500 text-black font-semibold py-4 px-8 transition-all duration-300 tracking-wider text-sm font-inter relative overflow-hidden group"
+              onClick={() => navigate('/menu-dining')}
             >
               <span className="relative z-10">VOIR LE MENU</span>
               <div className="absolute inset-0 bg-yellow-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
@@ -74,6 +81,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-semibold py-4 px-8 transition-all duration-300 tracking-wider text-sm font-inter"
+              onClick={() => navigate('/reservations')}
             >
               RÉSERVER UNE TABLE
             </motion.button>
@@ -105,4 +113,5 @@ const Hero = () => {
   )
 }
 
+export type { HeroProps }
 export default Hero 

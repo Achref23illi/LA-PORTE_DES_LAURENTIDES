@@ -28,14 +28,6 @@ const AboutSection = () => {
         >
           Que vous recherchiez un dîner intime à deux ou célébriez une occasion spéciale avec vos amis et votre famille, notre atmosphère élégante et notre service exceptionnel créent le cadre parfait pour des moments mémorables.
         </motion.p>
-        <motion.button 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="btn-secondary"
-        >
-          EN SAVOIR PLUS
-        </motion.button>
       </div>
     </section>
   )
